@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Elmira on 21.01.2017.
  */
 public class InputOutPut {
-    private static void addToList(String item) {
+    public  void addToList(String item) {
         List<String> list = read();
         list.add(item);
         write(list);
