@@ -12,6 +12,9 @@ public class ListServlet extends HttpServlet {
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
       throws IOException {
     resp.setContentType("text/plain");
-    resp.getWriter().println(io.read().get(8));
+    List<String> list=new ArrayList<>();
+    list.add("String in list");
+    io.write(list);
+    resp.getWriter().println(io.read().get(0));
   }
 }
