@@ -1,4 +1,4 @@
-package dan.ho.serial;
+package myapp;
 
 import com.google.gson.Gson;
 
