@@ -17,9 +17,9 @@ public class ListServlet extends HttpServlet {
     List<String> list=new ArrayList<>();
     list.add("String in list");
     
-   // io.write(list);
-   // resp.getWriter().println(io.read().get(0));
-    resp.getWriter().println(list.get(0));
+    io.write(list);
+    resp.getWriter().println(io.read().get(0));
+   // resp.getWriter().println(list.get(0));
     
     
   }
