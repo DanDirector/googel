@@ -14,8 +14,8 @@ public class InputOutPut {
         list.add(item);
         write(list);
     }
-
-    private static List<String> read() {
+  
+    public List<String> read() {
         ObjectInputStream is = null;
         try {
             is = new ObjectInputStream(new FileInputStream("src/main/Cart"));
@@ -36,7 +36,7 @@ public class InputOutPut {
         return null;
     }
 
-    private static void write(List<String> list) {
+    public void write(List<String> list) {
         ObjectOutputStream os = null;
         try {
             os = new ObjectOutputStream(new FileOutputStream("src/main/Cart"));
