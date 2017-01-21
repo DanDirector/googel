@@ -9,14 +9,6 @@ import java.util.List;
  * Created by Elmira on 21.01.2017.
  */
 public class InputOutPut {
-
-    public static void main(String[] args) {
-        Gson gson = new Gson();
-        String jsonInString = gson.toJson(new Item("item2", 200));
-        addToList(jsonInString);
-        System.out.println(read());
-    }
-
     private static void addToList(String item) {
         List<String> list = read();
         list.add(item);
@@ -46,9 +38,6 @@ public class InputOutPut {
 
     private static void write(List<String> list) {
         ObjectOutputStream os = null;
-        //List<String> list = new ArrayList<>(Arrays.asList("Item1", "Item2", "Item3"));
-        // Gson gson = new Gson();
-        //  String jsonInString = gson.toJson(list);
         try {
             os = new ObjectOutputStream(new FileOutputStream("src/main/Cart"));
             os.writeObject(list);
