@@ -1,4 +1,4 @@
-package dan.ho.serial;
+package myapp;
 
 /**
  * Created by Elmira on 21.01.2017.
