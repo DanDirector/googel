@@ -21,7 +21,7 @@ public class ListServlet extends HttpServlet {
     resp.getWriter().println(io.read().get(0));
     }
     catch(Exception e){
-      resp.getWriter().println(e.printStackTrace());
+      resp.getWriter().println(e.getMessage());
     }
   }
 }
