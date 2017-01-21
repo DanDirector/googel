@@ -18,7 +18,7 @@ public class InputOutPut {
     public List<String> read() {
         ObjectInputStream is = null;
         try {
-            is = new ObjectInputStream(new FileInputStream("src/main/Cart"));
+            is = new ObjectInputStream(new FileInputStream(new File("Cart")));
             return (List<String>) is.readObject();
         } catch (IOException e) {
             e.printStackTrace();
@@ -39,7 +39,7 @@ public class InputOutPut {
     public void write(List<String> list) {
         ObjectOutputStream os = null;
         try {
-            os = new ObjectOutputStream(new FileOutputStream("src/main/Cart"));
+            os = new ObjectOutputStream(new FileOutputStream(new File("Cart")));
             os.writeObject(list);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
