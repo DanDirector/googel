@@ -16,12 +16,11 @@ public class ListServlet extends HttpServlet {
     resp.setContentType("text/plain");
     List<String> list=new ArrayList<>();
     list.add("String in list");
-    try{
-    io.write(list);
-    resp.getWriter().println(io.read().get(0));
-    }
-    catch(Exception e){
-      resp.getWriter().println(e.getMessage());
-    }
+    
+   // io.write(list);
+   // resp.getWriter().println(io.read().get(0));
+    resp.getWriter().println(list.get(0));
+    
+    
   }
 }
